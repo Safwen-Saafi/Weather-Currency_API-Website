@@ -1,6 +1,6 @@
 'use strict';
 
-const api_key = "c44d355c0947b30b5b01757da57a4647";
+const api_key = "Your Api Key";
 
 
 
