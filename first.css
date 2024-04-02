@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    height: 100vh;
+    overflow: hidden;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+
+/*BACKGROUND + TEXT*/
+.section1,
+.section2 {
+    transform-style: preserve-3d;
+}
+
+.section1,
+.section2 {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+.section1::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url("./img/night.jpg") top center;
+    background-size: cover;
+    transform: translateZ(-1px) scale(2.01);
+}
+
+.section1::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url("./img/night.png") top center;
+    background-size: cover;
+}
+
+.section2 {
+    background: url("./img/cave1.jpg") center no-repeat;
+}
+
+.a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(to top, #010101, transparent);
+    z-index: 100;
+}
+
+
+
+
+
+
+/*NAV BAR*/
+.header {
+    position: absolute;
+    min-height: 100vh;
+    width: 100%;
+    z-index: 10000;
+
+}
+
+nav {
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+
+}
+
+.nav-links {
+    display: flex;
+}
+
+nav a {
+    color: white;
+}
+
+nav .nav-links ul {
+    font-size: 28px;
+    dispLay: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .nav-links ul li {
+    List-style: none;
+    margin-left: 10px;
+}
+
+nav .nav-links ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #ffffff;
+    border-radius: 20px;
+}
+
+nav .nav-links ul li a:hover {
+    background: #070713;
+    color: #a1146b;
+}
+
+nav .menu {
+    position: absolute;
+    width: 30px;
+    top: 22px;
+    right: 30px;
+    display: none;
+}
+
+
+
+
+/*RESPONSIVE NAVBAR*/
+@media screen and (max-width: 768px) {
+    nav {
+        padding: 0;
+    }
+
+    nav .nav-links {
+        position: absolute;
+        display: flex;
+        z-index: 2;
+        background-color: rgba(52, 48, 48, 0.925);
+        backdrop-filter: blur(7px);
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+    }
+
+    nav .menu {
+        display: block;
+        z-index: 2;
+    }
+
+    nav .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav .nav-links ul li {
+        margin: 25px 0;
+        font-size: 1.5em;
+    }
+
+    nav .mobile-menu {
+        margin-left: 0;
+        z-index: 2;
+    }
+
+    .logo img {
+        width: 120px;
+        height: 40px;
+        margin-top: 15px;
+        margin-left: 20px;
+    }
+}
+
+
+
+@media (min-width: 1200px) {
+    .logo img {
+        width: 240px;
+        height: 75px;
+    }
+}
+
+
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.about .container {
+    font-size: 25px;
+}
+
+.about .cards {
+    display: flex;
+
+}
+
+.about .cards .text-card {
+    border: 2px solid #096805;
+    color: lightgray;
+    padding: 2px;
+    border-radius: 10px;
+    margin: 20px;
+    margin-top: 90px;
+    padding: 20px;
+    width: 600px;
+}
+
+
+@media (max-width: 1228px) {
+    .about .cards {
+        flex-direction: column;
+    }
+}
+
+.about .cards .text-card:hover {
+    box-shadow: 0 0 20px 0 rgba(10, 70, 15, 0.459);
+}
+
+.perspective-text {
+    color: rgb(172, 179, 202);
+    font-family: Arial;
+    font-size: 58px;
+    font-weight: 900;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+}
+
+.perspective-line {
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+p {
+    margin: 0;
+    height: 50px;
+    line-height: 50px;
+    transition: all 0.5s ease-in-out;
+}
+
+.perspective-line:nth-child(odd) {
+    transform: skew(60deg, -30deg) scaleY(0.667);
+}
+
+.perspective-line:nth-child(even) {
+    transform: skew(0deg, -30deg) scaleY(1.333);
+}
+
+.perspective-line {
+    position: relative;
+}
+
+.perspective-line:hover p {
+    transform: translate(0, -50px);
+}
+
+.perspective-line:nth-child(1) {
+    left: 29px;
+}
+
+.perspective-line:nth-child(2) {
+    left: 58px;
+}
+
+.perspective-line:nth-child(3) {
+    left: 87px;
+}
+
+.perspective-line:nth-child(4) {
+    left: 116px;
+}
+
+.perspective-line:nth-child(5) {
+    left: 145px;
+}
+
+
+.about .cards .text-cardi{
+    padding: 2px;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    width: 500px;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="first.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <title>Home Page</title>
+</head>
+
+<body>
+    <!--NAV BAR-->
+    <section class="header">
+        <nav>
+            <a href="#" class="logo">
+                <img src="./weather/assets/images/logo2.png" alt="logo">
+            </a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="./weather/index.html">Weather</a></li>
+                    <li><a href="./currency/index.html">Currency</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+            <img src="img/menu-btn.png" alt="menu" class="menu">
+        </nav>
+    </section>
+
+    <!--SCRIPT FOR RESPONSIVE NAVBAR-->
+    <script>
+        const menuHamburger = document.querySelector(".menu")
+        const navLinks = document.querySelector(".nav-links")
+
+        menuHamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('mobile-menu')
+        })
+    </script>
+
+
+
+
+    <!-- TITLE TEXT -->
+    <div class="section1">
+    </div>
+    <div class="a"></div>
+    <div class="section2">
+        <section class="about">
+            <div class="container reveal">
+                <br><br><br><br><br>
+                <div class="cards">
+                    <div class="text-card">
+                        <div style="text-align: start;">Welcome to our all-in-one platform, where you can stay informed
+                            and empowered. Explore up-to-the-minute weather forecasts to plan your day seamlessly. Stay
+                            ahead of the game with real-time currency conversion rates, ensuring your financial
+                            decisions are both timely and well-informed. Your go-to destination for weather and currency
+                            - all at your fingertips.</div>
+                    </div>
+                    <div class="text-cardi">
+                        <div class="perspective-text">
+                            <div class="perspective-line">
+                                <p>Yeah!</p>
+                                <p>Let's Get</p>
+                            </div>
+                            <div class="perspective-line">
+                                <p>Let's Get</p>
+                                <p>Started</p>
+                            </div>
+                            <div class="perspective-line">
+                                <p>Started</p>
+                                <p>Right Now!</p>
+                            </div>
+                            <div class="perspective-line">
+                                <p>Right Now!</p>
+                                <p>!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+
+</body>
+
+</html>

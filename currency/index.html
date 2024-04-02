@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Currency Converter App</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- FontAweome CDN Link for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+
+
+  <!--NAV BAR-->
+  <section class="head">
+    <nav>
+      <a href="../first.html" class="logo">
+        <img src="../img/logo2.png" alt="logo">
+      </a>
+      <div class="nav-links">
+        <ul>
+          <li><a href="../weather/index.html">Weather</a></li>
+          <li><a href="#">Currency</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </div>
+      <img src="../img/menu-btn.png" alt="menu" class="menu">
+    </nav>
+  </section>
+
+  <!--SCRIPT FOR RESPONSIVE NAVBAR-->
+  <script>
+    const menuHamburger = document.querySelector(".menu")
+    const navLinks = document.querySelector(".nav-links")
+
+    menuHamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('mobile-menu')
+    })
+  </script>
+
+
+  <video autoplay muted loop plays in-line class="back">
+    <source src="../img/Dollars Falling Down.mp4" type="video/mp4">
+  </video>
+
+
+
+  <div class="wrapper">
+    <header>Currency Converter</header>
+    <form action="#">
+      <div class="amount">
+        <p>Enter Amount</p>
+        <input type="text" value="1">
+      </div>
+      <div class="drop-list">
+        <div class="from">
+          <p>From</p>
+          <div class="select-box">
+            <img src="https://flagcdn.com/48x36/us.png" alt="flag">
+            <select> <!-- Options tag are inserted from JavaScript --> </select>
+          </div>
+        </div>
+        <div class="icon"><i class="fas fa-exchange-alt"></i></div>
+        <div class="to">
+          <p>To</p>
+          <div class="select-box">
+            <img src="https://flagcdn.com/48x36/tn.png" alt="flag">
+            <select> <!-- Options tag are inserted from JavaScript --> </select>
+          </div>
+        </div>
+      </div>
+      <div class="exchange-rate">Getting exchange rate...</div>
+      <button>Get Exchange Rate</button>
+    </form>
+  </div>
+
+
+
+  <div class="wrapper1">
+    <br><br><br>
+    <header>Converting Section</header>
+    <form action="#">
+      <div class="amount1">
+        <input type="text" value="1">
+        <div class="txt-1">Getting your result...</div>
+      </div>
+      <div class="amount2">
+        <input type="text" value="1">
+        <div class="txt-2">Getting your result...</div>
+      </div>
+      <button>Convert Now!</button>
+    </form>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <script src="js/country-list.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
